@@ -1,0 +1,66 @@
+ifdef::env-github,env-browser[:context: cmd]
+[id='ref-rhoas-service-registry-artifact-update_{context}']
+= rhoas service-registry artifact update
+
+[role="_abstract"]
+[beta] Update artifact
+
+[discrete]
+== Synopsis
+
+
+Update artifact from file or directly standard input
+
+Artifacts can be typically in JSON format for most of the supported types, but may be in another format for a few (for example, PROTOBUF).
+The type of the content should be compatible with the artifact's type.
+(it would be an error to update an AVRO artifact with new OPENAPI content, for example).
+
+When successful, this creates a new version of the artifact, making it the most recent (and therefore official) version of the artifact.
+
+An artifact is update using the content provided in the body of the request.  
+This content is updated under a unique artifactId provided by user.
+		
+This command is available as part of the developer preview
+
+
+....
+rhoas service-registry artifact update [flags]
+....
+
+[discrete]
+== Examples
+
+....
+
+## update artifact from group and artifact-id
+rhoas service-registry artifact update my-artifact.json --artifact=my-artifact --group my-group
+
+....
+
+[discrete]
+== Options
+
+  `-a`, `--artifact` _string_::    Id of the artifact
+  `-f`, `--file` _string_::        File location of the artifact
+  `-g`, `--group` _string_::       Group of the artifact
+      `--instance-id` _string_::   Id of the registry to be used. By default uses currently selected registry
+  `-o`, `--output` _string_::      Format in which to display the Service Registry instance (choose from: "json", "yml", "yaml") (default "json")
+
+[discrete]
+== Options inherited from parent commands
+
+  `-h`, `--help`::      Show help for a command
+  `-v`, `--verbose`::   Enable verbose mode
+      `--version`::     Show rhoas version
+
+[discrete]
+== See also
+
+
+ifdef::env-github,env-browser[]
+* link:rhoas_service-registry_artifact.adoc#rhoas-service-registry-artifact[rhoas service-registry artifact]	 - [beta] Manage Service Registry Artifacts commands
+endif::[]
+ifdef::pantheonenv[]
+* link:{path}#ref-rhoas-service-registry-artifact_{context}[rhoas service-registry artifact]	 - [beta] Manage Service Registry Artifacts commands
+endif::[]
+

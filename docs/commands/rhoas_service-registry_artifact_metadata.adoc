@@ -1,0 +1,60 @@
+ifdef::env-github,env-browser[:context: cmd]
+[id='ref-rhoas-service-registry-artifact-metadata_{context}']
+= rhoas service-registry artifact metadata
+
+[role="_abstract"]
+[beta] Get artifact metadata
+
+[discrete]
+== Synopsis
+
+
+Gets the metadata for an artifact in the service registry. 
+The returned metadata includes both generated (read-only) and editable metadata (such as name and description).
+
+This command is available as part of the developer preview
+
+
+....
+rhoas service-registry artifact metadata [flags]
+....
+
+[discrete]
+== Examples
+
+....
+
+## Get latest artifact metadata for default group
+rhoas service-registry artifact metadata my-artifact
+
+## Get latest artifact metadata for my-group group
+rhoas service-registry artifact metadata my-artifact --group mygroup 
+		
+....
+
+[discrete]
+== Options
+
+  `-a`, `--artifact` _string_::    Id of the artifact
+  `-g`, `--group` _string_::       Group of the artifact
+      `--instance-id` _string_::   Id of the registry to be used. By default uses currently selected registry
+  `-o`, `--output` _string_::      Output format (json, yaml, yml)
+
+[discrete]
+== Options inherited from parent commands
+
+  `-h`, `--help`::      Show help for a command
+  `-v`, `--verbose`::   Enable verbose mode
+      `--version`::     Show rhoas version
+
+[discrete]
+== See also
+
+
+ifdef::env-github,env-browser[]
+* link:rhoas_service-registry_artifact.adoc#rhoas-service-registry-artifact[rhoas service-registry artifact]	 - [beta] Manage Service Registry Artifacts commands
+endif::[]
+ifdef::pantheonenv[]
+* link:{path}#ref-rhoas-service-registry-artifact_{context}[rhoas service-registry artifact]	 - [beta] Manage Service Registry Artifacts commands
+endif::[]
+

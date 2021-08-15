@@ -54,13 +54,6 @@ ifdef::pantheonenv[]
 endif::[]
 
 ifdef::env-github,env-browser[]
-* link:rhoas_config.adoc#rhoas-config[rhoas config]	 - Change specific configuration for the options
-endif::[]
-ifdef::pantheonenv[]
-* link:{path}#ref-rhoas-config_{context}[rhoas config]	 - Change specific configuration for the options
-endif::[]
-
-ifdef::env-github,env-browser[]
 * link:rhoas_kafka.adoc#rhoas-kafka[rhoas kafka]	 - Create, view, use, and manage your Apache Kafka instances
 endif::[]
 ifdef::pantheonenv[]
@@ -86,6 +79,13 @@ ifdef::env-github,env-browser[]
 endif::[]
 ifdef::pantheonenv[]
 * link:{path}#ref-rhoas-service-account_{context}[rhoas service-account]	 - Create, list, describe, delete and update service accounts
+endif::[]
+
+ifdef::env-github,env-browser[]
+* link:rhoas_service-registry.adoc#rhoas-service-registry[rhoas service-registry]	 - [beta] Service Registry commands
+endif::[]
+ifdef::pantheonenv[]
+* link:{path}#ref-rhoas-service-registry_{context}[rhoas service-registry]	 - [beta] Service Registry commands
 endif::[]
 
 ifdef::env-github,env-browser[]
