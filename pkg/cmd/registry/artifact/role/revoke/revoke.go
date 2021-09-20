@@ -55,7 +55,7 @@ func NewRevokeCommand(f *factory.Factory) *cobra.Command {
 				return opts.localizer.MustLocalizeError("artifact.cmd.common.error.useSaOrUserOnly")
 			}
 
-			// TODO validate user/service account
+			//nolint:gocritic
 			if opts.user != "" {
 				opts.principal = opts.user
 			} else if opts.serviceAccount != "" {
